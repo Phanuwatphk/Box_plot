@@ -2,15 +2,15 @@
 #include <conio.h>
 
 int main(){
-    int arrsize, i, j, c;
+    int i, j, c, arr[100], arrsize;
 
-    printf("Enter size of data : ");
-    scanf("%d", &arrsize);
-    int arr[arrsize];
-
-    for(i = 0;i < arrsize;i++){
+    for(i = 0;i < 100;i++){
         printf("Enter number[%d] : ", i + 1);
         scanf("%d", &arr[i]);
+	if(arr[i] == 0){
+		arrsize = i;
+		break;
+	}
     }
     for(i = 0;i < arrsize;i++){
         for(j = i + 1;j < arrsize;j++){
